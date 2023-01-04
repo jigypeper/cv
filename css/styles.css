@@ -120,6 +120,12 @@ a:hover {
     float: left;
 }
 
+.rust-pic {
+    height: 200px;
+    margin: auto 30px;
+    float: right;
+}
+
 .intro {
     width: 30%;
     margin: auto;
