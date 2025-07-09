@@ -13,123 +13,124 @@
 
   </head>
   <body>
-      <nav class="navbar">
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
           <div class="nav-container">
               <div class="logo">Ahmed</div>
-              <ul class="nav-menu">
-                  <li><a href="#home" class="nav-link">Home</a></li>
-                  <li><a href="#skills" class="nav-link">Skills</a></li>
-                  <li><a href="#experience" class="nav-link">Experience</a></li>
-                  <li><a href="#education" class="nav-link">Education</a></li>
-                  <li><a href="#contact" class="nav-link">Contact</a></li>
+              <ul class="nav-menu" role="menu">
+                  <li role="menuitem"><a href="#home" class="nav-link" aria-label="Go to home section">Home</a></li>
+                  <li role="menuitem"><a href="#skills" class="nav-link" aria-label="Go to skills section">Skills</a></li>
+                  <li role="menuitem"><a href="#experience" class="nav-link" aria-label="Go to experience section">Experience</a></li>
+                  <li role="menuitem"><a href="#education" class="nav-link" aria-label="Go to education section">Education</a></li>
+                  <li role="menuitem"><a href="#contact" class="nav-link" aria-label="Go to contact section">Contact</a></li>
+                  <li role="menuitem"><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button></li>
               </ul>
-              <div class="hamburger">
+              <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
                   <span></span>
                   <span></span>
                   <span></span>
-              </div>
+              </button>
           </div>
       </nav>
-      <div class="top-container" id="home">
+      <header class="top-container" id="home">
           <h1>I'm Ahmed</h1>
           <h2><em>a Dreamer</em></h2>
-      </div>
+      </header>
 
-      <div class="middle-container">
-          <div class="profile">
-            <img src="images/profile.png" alt="Ahmed profile picture">
-            <p class="intro">Software Engineer with a Mechanical background. <strong>Director at <a href="https://phasealpha.io">PhaseAlpha</a></strong></p>
-          </div>
+      <main class="middle-container">
+          <section class="profile">
+            <img src="images/profile.png" alt="Ahmed's professional profile picture">
+            <p class="intro">Software Engineer with a Mechanical background. <strong>Director at <a href="https://phasealpha.io" aria-label="Visit PhaseAlpha website">PhaseAlpha</a></strong></p>
+          </section>
           <hr>
-          <div class="skills section" id="skills">
+          <section class="skills section" id="skills">
             <h2>My Skills.</h2>
-            <div class="skills-grid">
-              <div class="skill-item">
-                <img src="images/Python-logo.png" alt="Python logo">
+            <div class="skills-grid" role="list">
+              <div class="skill-item" role="listitem">
+                <img src="images/Python-logo.png" alt="Python programming language logo">
                 <h3>Python</h3>
                 <p>I've been working with Python for close to 6 years now, mainly for automation projects. I've recently started furthering my knowledge in my spare time.</p>
-                <div class="skill-progress">
+                <div class="skill-progress" role="progressbar" aria-label="Python skill level" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                   <div class="skill-progress-bar" style="width: 100%;"></div>
                 </div>
               </div>
-              <div class="skill-item">
-                <img src="images/Postgresql.png" alt="PostgreSQL logo">
+              <div class="skill-item" role="listitem">
+                <img src="images/Postgresql.png" alt="PostgreSQL database logo">
                 <h3>SQL, PostgreSQL</h3>
                 <p>I picked up SQL to organise data in some of the projects I was working on, the files are much lighter than spreadsheets :)</p>
-                <div class="skill-progress">
+                <div class="skill-progress" role="progressbar" aria-label="SQL skill level" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
                   <div class="skill-progress-bar" style="width: 60%;"></div>
                 </div>
               </div>
-              <div class="skill-item">
-                <img src="images/VB.NET-Logo.png" alt="VB.NET logo">
+              <div class="skill-item" role="listitem">
+                <img src="images/VB.NET-Logo.png" alt="VB.NET programming language logo">
                 <h3>VB.NET</h3>
                 <p>Just like anyone else, I think my relationship with VB is complicated, it's easy to prototype and test, but hard to structure.</p>
-                <div class="skill-progress">
+                <div class="skill-progress" role="progressbar" aria-label="VB.NET skill level" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                   <div class="skill-progress-bar" style="width: 80%;"></div>
                 </div>
               </div>
-              <div class="skill-item">
-                <img src="images/rust.png" alt="Rust logo">
+              <div class="skill-item" role="listitem">
+                <img src="images/rust.png" alt="Rust programming language logo">
                 <h3>Rust</h3>
                 <p>Over the past couple of years I have become interested in learning a strictly typed low level language. I came across Rust and fell in love with the compiler. I still have a lot to learn, but I am enjoying every minute!</p>
-                <div class="skill-progress">
+                <div class="skill-progress" role="progressbar" aria-label="Rust skill level" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                   <div class="skill-progress-bar" style="width: 80%;"></div>
                 </div>
               </div>
-              <div class="skill-item">
-                <img src="images/haskell-pic.png" alt="Haskell logo">
+              <div class="skill-item" role="listitem">
+                <img src="images/haskell-pic.png" alt="Haskell programming language logo">
                 <h3>Haskell</h3>
                 <p>I started looking at Haskell to broaden my horizons, there is something quite elegant about functional programming, it needs a whole shift in perspective to truly be appreciated</p>
-                <div class="skill-progress">
+                <div class="skill-progress" role="progressbar" aria-label="Haskell skill level" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
                   <div class="skill-progress-bar" style="width: 40%;"></div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
           <hr>
-          <div class="contact-me section" id="contact">
+          <section class="contact-me section" id="contact">
             <h2>Get In Touch</h2>
             <div class="contact-info">
               <h3>For collaboration, and projects.</h3>
               <p class="intro">I'm interested in all things software and robotics. Particularly automation!</p>
-              <a class="btn" href="mailto:ahmed.hagi@phasealpha.io">CONTACT ME</a>
+              <a class="btn" href="mailto:ahmed.hagi@phasealpha.io" aria-label="Send email to Ahmed">CONTACT ME</a>
             </div>
-          </div>
+          </section>
           <hr>
-          <div class="education section" id="education">
+          <section class="education section" id="education">
             <h2>Education</h2>
-            <div class="education-grid">
-              <div class="education-item">
+            <div class="education-grid" role="list">
+              <div class="education-item" role="listitem">
                 <h3>Software Engineering</h3>
                 <p>Imperial College London</p>
               </div>
-              <div class="education-item">
+              <div class="education-item" role="listitem">
                 <h3>MSc by Research</h3>
                 <p>University of Huddersfield</p>
               </div>
-              <div class="education-item">
+              <div class="education-item" role="listitem">
                 <h3>BEng</h3>
                 <p>University of Huddersfield</p>
               </div>
             </div>
-          </div>
+          </section>
           <hr>
-          <div class="experience section" id="experience">
+          <section class="experience section" id="experience">
             <h2>Experience</h2>
-            <div class="experience-grid">
-              <div class="experience-item">
+            <div class="experience-grid" role="list">
+              <div class="experience-item" role="listitem">
                 <div class="experience-date">2023 - Present</div>
                 <div class="experience-title">Software Engineer</div>
               </div>
-              <div class="experience-item">
+              <div class="experience-item" role="listitem">
                 <div class="experience-date">2019 - 2023</div>
                 <div class="experience-title">CAD/Systems Developer</div>
               </div>
-              <div class="experience-item">
+              <div class="experience-item" role="listitem">
                 <div class="experience-date">2017 - 2019</div>
                 <div class="experience-title">Mechanical Engineer</div>
               </div>
-              <div class="experience-item">
+              <div class="experience-item" role="listitem">
                 <div class="experience-date">2016 - Present</div>
                 <div class="experience-title">Director, Python/Rust Engineer</div>
               </div>
@@ -140,18 +141,17 @@
               <p>Mathematics</p>
               <p>Software and Technology</p>
             </div>
-          </div>
-        </div>
+          </section>
+        </main>
         
-        
-        <div class="bottom-container">
+        <footer class="bottom-container">
           <div class="footer-links">
-            <a class="footer-link" href="https://linkedin.com/in/ahmed-hagi-68075b89/">LinkedIn</a>
-            <a class="footer-link" href="https://www.github.com/jigypeper">GitHub</a>
-            <a class="footer-link" href="https://www.phasealpha.io">Website</a>
+            <a class="footer-link" href="https://linkedin.com/in/ahmed-hagi-68075b89/" aria-label="Visit Ahmed's LinkedIn profile">LinkedIn</a>
+            <a class="footer-link" href="https://www.github.com/jigypeper" aria-label="Visit Ahmed's GitHub profile">GitHub</a>
+            <a class="footer-link" href="https://www.phasealpha.io" aria-label="Visit Ahmed's company website">Website</a>
           </div>
           <p class="copyright">© 2023 Ahmed Hagi.</p>
-        </div>
+        </footer>
       
       <script>
           // Mobile menu toggle
@@ -159,8 +159,10 @@
           const navMenu = document.querySelector('.nav-menu');
           
           hamburger.addEventListener('click', () => {
+              const isActive = hamburger.classList.contains('active');
               hamburger.classList.toggle('active');
               navMenu.classList.toggle('active');
+              hamburger.setAttribute('aria-expanded', !isActive);
           });
           
           // Smooth scrolling for navigation links
@@ -208,6 +210,26 @@
           document.querySelectorAll('.section, .skill-item, .experience-item, .education-item').forEach(el => {
               el.style.animationPlayState = 'paused';
               observer.observe(el);
+          });
+
+          // Theme toggle functionality
+          const themeToggle = document.getElementById('themeToggle');
+          const body = document.body;
+          
+          // Load saved theme or default to light
+          const savedTheme = localStorage.getItem('theme') || 'light';
+          if (savedTheme === 'dark') {
+              body.setAttribute('data-theme', 'dark');
+              themeToggle.textContent = '☀️';
+          }
+          
+          themeToggle.addEventListener('click', () => {
+              const currentTheme = body.getAttribute('data-theme');
+              const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+              
+              body.setAttribute('data-theme', newTheme);
+              themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+              localStorage.setItem('theme', newTheme);
           });
       </script>
   </body>
