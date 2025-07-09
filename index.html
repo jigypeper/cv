@@ -179,6 +179,36 @@
                   navMenu.classList.remove('active');
               });
           });
+
+          // Intersection Observer for scroll animations
+          const observerOptions = {
+              threshold: 0.1,
+              rootMargin: '0px 0px -50px 0px'
+          };
+
+          const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      entry.target.style.animationPlayState = 'running';
+                      
+                      // Animate skill progress bars
+                      const progressBars = entry.target.querySelectorAll('.skill-progress-bar');
+                      progressBars.forEach(bar => {
+                          const width = bar.style.width;
+                          bar.style.width = '0%';
+                          setTimeout(() => {
+                              bar.style.width = width;
+                          }, 300);
+                      });
+                  }
+              });
+          }, observerOptions);
+
+          // Observe all sections and grid items
+          document.querySelectorAll('.section, .skill-item, .experience-item, .education-item').forEach(el => {
+              el.style.animationPlayState = 'paused';
+              observer.observe(el);
+          });
       </script>
   </body>
 </html>
