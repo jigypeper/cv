@@ -529,7 +529,7 @@ a:hover {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background: rgba(163, 227, 233, 0.98);
+        background: rgba(163, 227, 233, 1);
         width: 100%;
         text-align: center;
         transition: 0.3s;
